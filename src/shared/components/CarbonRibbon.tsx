@@ -88,13 +88,7 @@ const CarbonRibbon = (props: Props): JSX.Element => {
           {!(carbonData && carbonData.p) && <>&nbsp;</>}
           {!!(carbonData && carbonData.p) && <>Cleaner than {carbonData.p}% of pages tested</>}
         </div>
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://websitecarbon.com"
-          variant="ghost"
-          className="ribbon-carbon-link"
-        >
+        <Link target="_blank" rel="noopener noreferrer" href="https://websitecarbon.com" className="ribbon-carbon-link">
           Website Carbon
           <svg
             xmlns="http://www.w3.org/2000/svg"

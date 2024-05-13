@@ -1,26 +1,26 @@
 .docs-team-member-card {
   display: flex;
   align-items: center;
-  border-top: $border-width-xxs solid $border-color-subtle;
-  padding: space(2x) 0;
+  border-top: var(--border-width-xxs) solid var(--border-color-subtle);
+  padding: var(--space-2x) 0;
 
   &:first-of-type {
-    margin-top: space(4x);
+    margin-top: var(--space-4x);
   }
 
   &:last-of-type {
-    border-bottom: $border-width-xxs solid $border-color-subtle;
+    border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
   }
 
   img {
-    width: $size-icon-decorative;
-    height: $size-icon-decorative;
+    width: var(--size-icon-decorative);
+    height: var(--size-icon-decorative);
     margin: 0;
-    border-radius: $border-radius-circle;
+    border-radius: var(--border-radius-circle);
   }
 
   .docs-team-member {
-    margin-left: space(4x);
+    margin-left: var(--space-4x);
   }
 
   .docs-team-member-name {

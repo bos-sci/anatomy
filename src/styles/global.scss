@@ -1,5 +1,10 @@
-@import '~@boston-scientific/anatomy-tokens/lib/sass/tokens';
+$font-path: '~@boston-scientific/anatomy-tokens/lib/fonts';
+
+@import '~@boston-scientific/anatomy-tokens/lib/scss/corporate/light';
+@import '~@boston-scientific/anatomy-tokens/lib/css/corporate/light';
+@import '~@boston-scientific/anatomy-tokens/lib/base-styles/base';
 @import '~@boston-scientific/anatomy-react/lib/styles/library';
+
 @import './abstracts/abstracts';
 @import './base/base';
 @import './layout/layout';

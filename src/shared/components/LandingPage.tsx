@@ -58,7 +58,7 @@ const LandingPage = (props: Props): JSX.Element => {
                         cardDescription: entry.leadParagraph as string
                       }}
                       headingLevel="h2"
-                      variant="border-light"
+                      variant="border"
                       linkHref={getUrl(entry)}
                       linkTitle
                     />
