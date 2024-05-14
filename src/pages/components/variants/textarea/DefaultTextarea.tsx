@@ -10,9 +10,18 @@ const DefaultTextarea = (): JSX.Element => {
   };
 
   return (
-    <Example>
-      <Textarea id="textareaDefault" label="Textarea" value={inputValue} onChange={handleChange} />
-    </Example>
+    <>
+      <Example>
+        <Textarea id="textareaDefault" label="Textarea" value={inputValue} onChange={handleChange} />
+      </Example>
+      <iframe
+        title="Textarea Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-textarea--playground&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

@@ -60,9 +60,18 @@ const DefaultNavSecondary = (): JSX.Element => {
   }, []);
 
   return (
-    <Example>
-      <NavSecondary texts={navSecondaryTexts} navItems={navItems} location={location} />
-    </Example>
+    <>
+      <Example>
+        <NavSecondary texts={navSecondaryTexts} navItems={navItems} location={location} />
+      </Example>
+      <iframe
+        title="Secondary navigation Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-secondary-navigation--playground&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

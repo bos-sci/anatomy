@@ -19,16 +19,25 @@ const WithHelpError = (): JSX.Element => {
   };
 
   return (
-    <Example>
-      <Fieldset
-        legend="Legend"
-        helpText="This is an example of help text. It can wrap to two lines, but try not to go longer than three."
-        errorText={errorText}
-      >
-        <InputText label="Related text input" className="bsds-mt-2x" value={inputValue} onChange={handleChange} />
-        <Textarea label="Related textarea" className="bsds-mt-3x" />
-      </Fieldset>
-    </Example>
+    <>
+      <Example>
+        <Fieldset
+          legend="Legend"
+          helpText="This is an example of help text. It can wrap to two lines, but try not to go longer than three."
+          errorText={errorText}
+        >
+          <InputText label="Related text input" className="bsds-mt-2x" value={inputValue} onChange={handleChange} />
+          <Textarea label="Related textarea" className="bsds-mt-3x" />
+        </Fieldset>
+      </Example>
+      <iframe
+        title="Fieldset with help and error Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-fieldset--with-help-and-error&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

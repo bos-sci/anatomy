@@ -15,16 +15,25 @@ const TextareaWithHelpError = (): JSX.Element => {
   };
 
   return (
-    <Example>
-      <Textarea
-        label="Textarea"
-        errorText={errorText}
-        defaultValue="Invalid value"
-        helpText="This is an example of help text. It can wrap to two lines, but try not to go longer than three."
-        forceValidation
-        onChange={handleChange}
-      />
-    </Example>
+    <>
+      <Example>
+        <Textarea
+          label="Textarea"
+          errorText={errorText}
+          defaultValue="Invalid value"
+          helpText="This is an example of help text. It can wrap to two lines, but try not to go longer than three."
+          forceValidation
+          onChange={handleChange}
+        />
+      </Example>
+      <iframe
+        title="Textarea with help and error Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-textarea--with-help-and-error&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

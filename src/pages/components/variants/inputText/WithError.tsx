@@ -15,15 +15,24 @@ const WithError = (): JSX.Element => {
   };
 
   return (
-    <Example>
-      <InputText
-        label="Text input"
-        errorText={errorText}
-        defaultValue="Invalid value"
-        forceValidation
-        onChange={handleChange}
-      />
-    </Example>
+    <>
+      <Example>
+        <InputText
+          label="Text input"
+          errorText={errorText}
+          defaultValue="Invalid value"
+          forceValidation
+          onChange={handleChange}
+        />
+      </Example>
+      <iframe
+        title="Text input with help Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-text-input--with-error&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

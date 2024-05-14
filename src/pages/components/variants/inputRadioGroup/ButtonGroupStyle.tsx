@@ -78,6 +78,20 @@ const ButtonGroupStyle = (): JSX.Element => {
           />
         </RadioGroup>
       </Example>
+      <iframe
+        title="Button style radio group Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-radio-group--button-group&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+      <iframe
+        title="Button style radio group with help and error Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-radio-group--button-group-with-help-and-error&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
     </>
   );
 };

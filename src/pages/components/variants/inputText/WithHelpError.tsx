@@ -15,16 +15,25 @@ const WithHelpAndError = (): JSX.Element => {
   };
 
   return (
-    <Example>
-      <InputText
-        label="Text input"
-        helpText="This is an example of help text. It can wrap to two lines, but try not to go longer than three."
-        errorText={errorText}
-        defaultValue="Invalid value"
-        forceValidation
-        onChange={handleChange}
-      />
-    </Example>
+    <>
+      <Example>
+        <InputText
+          label="Text input"
+          helpText="This is an example of help text. It can wrap to two lines, but try not to go longer than three."
+          errorText={errorText}
+          defaultValue="Invalid value"
+          forceValidation
+          onChange={handleChange}
+        />
+      </Example>
+      <iframe
+        title="Text input with help Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-text-input--with-help-and-error&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 
