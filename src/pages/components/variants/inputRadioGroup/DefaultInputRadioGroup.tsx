@@ -11,31 +11,40 @@ const DefaultInputRadioGroup = (): JSX.Element => {
   };
 
   return (
-    <Example>
-      <RadioGroup legend="Legend">
-        <InputRadio
-          label="Radio 1"
-          name="groupDefault"
-          value="defaultRadio1"
-          checked={selectedRadio === 'defaultRadio1'}
-          onChange={handleChange}
-        />
-        <InputRadio
-          label="Radio 2"
-          name="groupDefault"
-          value="defaultRadio2"
-          checked={selectedRadio === 'defaultRadio2'}
-          onChange={handleChange}
-        />
-        <InputRadio
-          label="Radio 3"
-          name="groupDefault"
-          value="defaultRadio3"
-          checked={selectedRadio === 'defaultRadio3'}
-          onChange={handleChange}
-        />
-      </RadioGroup>
-    </Example>
+    <>
+      <Example>
+        <RadioGroup legend="Legend">
+          <InputRadio
+            label="Radio 1"
+            name="groupDefault"
+            value="defaultRadio1"
+            checked={selectedRadio === 'defaultRadio1'}
+            onChange={handleChange}
+          />
+          <InputRadio
+            label="Radio 2"
+            name="groupDefault"
+            value="defaultRadio2"
+            checked={selectedRadio === 'defaultRadio2'}
+            onChange={handleChange}
+          />
+          <InputRadio
+            label="Radio 3"
+            name="groupDefault"
+            value="defaultRadio3"
+            checked={selectedRadio === 'defaultRadio3'}
+            onChange={handleChange}
+          />
+        </RadioGroup>
+      </Example>
+      <iframe
+        title="Radio group Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-radio-group--playground&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

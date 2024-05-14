@@ -24,17 +24,26 @@ const CobrandedNavPrimary = (): JSX.Element => {
   const navigate = useNavigate();
 
   return (
-    <Example isFlush>
-      <NavPrimary
-        logo={primaryLogo}
-        logoSecondary={secondaryLogo}
-        navItems={simpleData}
-        utilityItems={utilityData}
-        location={location}
-        isActiveNode={(node: NavNodePrimary, ref: RefObject<HTMLAnchorElement>) => isActiveNode(node, ref, location)}
-        navigateToSearchResult={(result) => navigate(result.to as string)}
-      />
-    </Example>
+    <>
+      <Example isFlush>
+        <NavPrimary
+          logo={primaryLogo}
+          logoSecondary={secondaryLogo}
+          navItems={simpleData}
+          utilityItems={utilityData}
+          location={location}
+          isActiveNode={(node: NavNodePrimary, ref: RefObject<HTMLAnchorElement>) => isActiveNode(node, ref, location)}
+          navigateToSearchResult={(result) => navigate(result.to as string)}
+        />
+      </Example>
+      <iframe
+        title="Co-branded primary nav Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-primary-navigation--cobranded&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="800"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

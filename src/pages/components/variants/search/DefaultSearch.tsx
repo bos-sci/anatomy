@@ -29,14 +29,23 @@ const DefaultSearch = (): JSX.Element => {
   }, [query]);
 
   return (
-    <Example>
-      <Search
-        label="Search"
-        searchResults={searchResults}
-        navigateToResult={(result) => navigate(result.to as string)}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-    </Example>
+    <>
+      <Example>
+        <Search
+          label="Search"
+          searchResults={searchResults}
+          navigateToResult={(result) => navigate(result.to as string)}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </Example>
+      <iframe
+        title="Search Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-search--playground&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

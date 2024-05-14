@@ -10,22 +10,31 @@ const RequiredActionModal = (): JSX.Element => {
   const negativeAction = <Button onClick={() => modalRef.current?.close()}>Cancel</Button>;
 
   return (
-    <Example>
-      <Button type="button" aria-haspopup="true" onClick={() => modalRef.current?.showModal()}>
-        Open required action modal
-      </Button>
-      <Modal
-        ref={modalRef}
-        hasClose={false}
-        title="Modal title"
-        positiveAction={positiveAction}
-        negativeAction={negativeAction}
-      >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet varius sapien. Nullam diam nisl, congue
-        bibendum orci eu, fermentum consequat nulla. Nunc luctus placerat mauris, eu convallis ante sollicitudin in.
-        Maecenas orci eros, placerat bibendum rhoncus a, tincidunt vitae lectus.
-      </Modal>
-    </Example>
+    <>
+      <Example>
+        <Button type="button" aria-haspopup="true" onClick={() => modalRef.current?.showModal()}>
+          Open required action modal
+        </Button>
+        <Modal
+          ref={modalRef}
+          hasClose={false}
+          title="Modal title"
+          positiveAction={positiveAction}
+          negativeAction={negativeAction}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet varius sapien. Nullam diam nisl,
+          congue bibendum orci eu, fermentum consequat nulla. Nunc luctus placerat mauris, eu convallis ante
+          sollicitudin in. Maecenas orci eros, placerat bibendum rhoncus a, tincidunt vitae lectus.
+        </Modal>
+      </Example>
+      <iframe
+        title="Modal with required action Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-modal--required-action&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

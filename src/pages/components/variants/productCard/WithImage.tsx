@@ -30,6 +30,13 @@ const WithImage = (): JSX.Element => {
           image={<Image ratio="1:1" src={image5050} alt="Demo placeholder for a product image." />}
         />
       </Example>
+      <iframe
+        title="Product card with image Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-product-card--with-image&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
     </>
   );
 };

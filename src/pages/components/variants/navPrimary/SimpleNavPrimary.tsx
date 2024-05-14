@@ -18,16 +18,25 @@ const SimpleNavPrimary = (): JSX.Element => {
   const navigate = useNavigate();
 
   return (
-    <Example isFlush>
-      <NavPrimary
-        logo={logo}
-        navItems={simpleData}
-        utilityItems={utilityData}
-        location={location}
-        isActiveNode={(node: NavNodePrimary, ref: RefObject<HTMLAnchorElement>) => isActiveNode(node, ref, location)}
-        navigateToSearchResult={(result) => navigate(result.to as string)}
-      />
-    </Example>
+    <>
+      <Example isFlush>
+        <NavPrimary
+          logo={logo}
+          navItems={simpleData}
+          utilityItems={utilityData}
+          location={location}
+          isActiveNode={(node: NavNodePrimary, ref: RefObject<HTMLAnchorElement>) => isActiveNode(node, ref, location)}
+          navigateToSearchResult={(result) => navigate(result.to as string)}
+        />
+      </Example>
+      <iframe
+        title="Simple primary nav Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-primary-navigation--simple&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="800"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

@@ -14,33 +14,42 @@ const WithError = (): JSX.Element => {
   };
 
   return (
-    <Example>
-      <RadioGroup legend="Legend" errorText={errorText}>
-        <InputRadio
-          label="Radio 1"
-          name="groupError"
-          value="groupError1"
-          checked={selectedRadio === 'groupError1'}
-          forceValidation
-          onChange={handleChange}
-        />
-        <InputRadio
-          label="Radio 2"
-          name="groupError"
-          value="groupError2"
-          helpText="This is an example help text. It can wrap to two lines, but try not to go longer than three."
-          checked={selectedRadio === 'groupError2'}
-          onChange={handleChange}
-        />
-        <InputRadio
-          label="Radio 3"
-          name="groupError"
-          value="groupError3"
-          checked={selectedRadio === 'groupError3'}
-          onChange={handleChange}
-        />
-      </RadioGroup>
-    </Example>
+    <>
+      <Example>
+        <RadioGroup legend="Legend" errorText={errorText}>
+          <InputRadio
+            label="Radio 1"
+            name="groupError"
+            value="groupError1"
+            checked={selectedRadio === 'groupError1'}
+            forceValidation
+            onChange={handleChange}
+          />
+          <InputRadio
+            label="Radio 2"
+            name="groupError"
+            value="groupError2"
+            helpText="This is an example help text. It can wrap to two lines, but try not to go longer than three."
+            checked={selectedRadio === 'groupError2'}
+            onChange={handleChange}
+          />
+          <InputRadio
+            label="Radio 3"
+            name="groupError"
+            value="groupError3"
+            checked={selectedRadio === 'groupError3'}
+            onChange={handleChange}
+          />
+        </RadioGroup>
+      </Example>
+      <iframe
+        title="Radio group with error Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-radio-group--with-error&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 

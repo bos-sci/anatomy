@@ -78,6 +78,20 @@ const WithError = (): JSX.Element => {
           ))}
         </Fieldset>
       </Example>
+      <iframe
+        title="Checkbox Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-checkbox--with-error&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+      <iframe
+        title="Checkbox group Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-checkbox--group-with-error&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
     </>
   );
 };

@@ -26,6 +26,20 @@ const WithHelp = (): JSX.Element => {
           <InputCheckbox label="Checkbox 3" />
         </Fieldset>
       </Example>
+      <iframe
+        title="Checkbox Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-checkbox--with-help&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+      <iframe
+        title="Checkbox group Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-checkbox--group-with-help&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
     </>
   );
 };

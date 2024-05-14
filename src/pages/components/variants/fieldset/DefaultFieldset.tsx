@@ -12,19 +12,28 @@ const DefaultFieldset = (): JSX.Element => {
   };
 
   return (
-    <Example>
-      <Fieldset legend="Legend">
-        <InputText
-          id="defaultFieldsetTextInput"
-          label="Related text input"
-          className="bsds-mt-2x"
-          value={inputValue}
-          onChange={handleChange}
-        />
+    <>
+      <Example>
+        <Fieldset legend="Legend">
+          <InputText
+            id="defaultFieldsetTextInput"
+            label="Related text input"
+            className="bsds-mt-2x"
+            value={inputValue}
+            onChange={handleChange}
+          />
 
-        <Textarea id="defaultFieldsetTextarea" label="Related textarea" className="bsds-mt-3x" />
-      </Fieldset>
-    </Example>
+          <Textarea id="defaultFieldsetTextarea" label="Related textarea" className="bsds-mt-3x" />
+        </Fieldset>
+      </Example>
+      <iframe
+        title="Fieldset Storybook story"
+        src="https://main--64e769384ef6b440f819fcec.chromatic.com/?path=/story/components-fieldset--playground&full=1&shortcuts=false&singleStory=true"
+        width="100%"
+        height="400"
+        className="bsds-mt-3x"
+      ></iframe>
+    </>
   );
 };
 
