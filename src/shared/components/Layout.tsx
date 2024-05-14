@@ -8,6 +8,7 @@ import { SearchResult } from '@boston-scientific/anatomy-react';
 import { useNavigate } from 'react-router-dom';
 import { indexSearch, isActiveNode, ROOT_URL } from 'shared/helpers';
 import useHeadingIds from 'shared/hooks/useHeadingIds';
+import logoTagline from 'assets/images/logo-bsc-tagline.svg';
 import CarbonRibbon from 'shared/components/CarbonRibbon';
 
 interface Props {
@@ -121,9 +122,11 @@ const Layout = (props: Props): JSX.Element => {
       />
       <SearchIndexContext.Provider value={index}>{props.children}</SearchIndexContext.Provider>
       {pathname ? (
-        <Footer className="docs-footer">{<CarbonRibbon url={pathname} />}</Footer>
+        <Footer logo={{ src: logoTagline, alt: 'Boston Scientific' }} className="docs-footer">
+          {<CarbonRibbon url={pathname} />}
+        </Footer>
       ) : (
-        <Footer className="docs-footer" />
+        <Footer logo={{ src: logoTagline, alt: 'Boston Scientific' }} className="docs-footer" />
       )}
     </>
   );

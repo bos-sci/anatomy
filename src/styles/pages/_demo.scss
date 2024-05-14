@@ -1,21 +1,21 @@
 .docs-wire-header,
 .docs-wire-main {
-  padding: 0 space(2x) space(2x);
+  padding: 0 var(--space-2x) var(--space-2x);
   text-align: center;
 }
 
 .docs-wire-header {
-  border-bottom: $border-width-xxs solid $border-color-subtle;
+  border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
 }
 
 .docs-wire-main {
   height: 100vh;
-  background: $neutral-95;
+  background: var(--neutral-95);
 }
 
 .docs-wire-card {
   width: 100%;
-  padding: space(6x) space(lg);
-  background: $neutral-95;
+  padding: var(--space-6x) var(--space-lg);
+  background: var(--neutral-95);
   text-align: center;
 }

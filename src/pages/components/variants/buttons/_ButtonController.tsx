@@ -5,7 +5,6 @@ import IconRight from './IconRight';
 import Icon from './Icon';
 import DefaultStyle from './DefaultStyle';
 import AssertiveStyle from './AssertiveStyle';
-import GhostStyle from './GhostStyle';
 import SubtleStyle from './SubtleStyle';
 import TextStyle from './TextStyle';
 import Disabled from './Disabled';
@@ -26,8 +25,6 @@ const ButtonController = ({ variantId }: VariantProps): JSX.Element => {
       return <DefaultStyle />;
     case 'buttonAssertive':
       return <AssertiveStyle />;
-    case 'buttonGhost':
-      return <GhostStyle />;
     case 'buttonSubtle':
       return <SubtleStyle />;
     case 'buttonText':

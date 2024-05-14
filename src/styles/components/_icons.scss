@@ -5,14 +5,14 @@
 
 .docs-icon-decorative {
   > img {
-    width: $size-icon-decorative;
-    height: $size-icon-decorative;
+    width: var(--size-icon-decorative);
+    height: var(--size-icon-decorative);
   }
 }
 
 .docs-icon-system {
   > img {
-    width: $ffs-body-assertive;
-    height: $ffs-body-assertive;
+    width: var(--ffs-body-assertive);
+    height: var(--ffs-body-assertive);
   }
 }

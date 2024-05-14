@@ -1,16 +1,16 @@
 .ribbon-carbon {
   display: flex;
-  background: $accent-secondary-20;
+  background: var(--accent-secondary-20);
 
   &-content {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
     width: 100%;
-    padding: space(lg) space(3x);
-    color: $text-color-ghost;
-    gap: space(lg);
-    @include font-size($fs-small);
+    padding: var(--space-lg) var(--space-3x);
+    color: var(--text-color-inverse);
+    gap: var(--space-lg);
+    font-size: var(--fs-small);
   }
 
   &.is-constrained {
@@ -24,20 +24,22 @@
   }
 
   .ribbon-carbon-link {
+    color: var(--neutral-100);
+
     &:hover {
-      color: $neutral-80;
+      color: var(--neutral-80);
     }
   }
 
   .ribbon-carbon-icon {
-    width: space(lg);
+    width: var(--space-lg);
 
     &.bsds-icon-left {
-      margin-right: space(sm);
+      margin-right: var(--space-sm);
     }
 
     &.bsds-icon-right {
-      margin-left: space(sm);
+      margin-left: var(--space-sm);
     }
   }
 }
@@ -46,8 +48,8 @@
   .ribbon-carbon {
     &-content {
       grid-template-columns: auto 1fr auto;
-      gap: space(4x);
-      padding: space(lg) space(3x);
+      gap: var(--space-4x);
+      padding: var(--space-lg) var(--space-3x);
     }
 
     &.is-constrained {
@@ -64,7 +66,7 @@
   .ribbon-carbon {
     &.is-constrained {
       .ribbon-carbon-content {
-        padding: space(lg) 0;
+        padding: var(--space-lg) 0;
       }
     }
   }

@@ -1,9 +1,9 @@
 // NOTE: changes to class names need to be done in code and contentful (foundations > color/spacing/tokens)
 
 @mixin swatch {
-  width: space(15x);
-  height: space(6x);
-  margin-top: space(3x);
+  width: var(--space-15x);
+  height: var(--space-6x);
+  margin-top: var(--space-3x);
 }
 
 @mixin swatch-border($border-properties) {
@@ -20,22 +20,22 @@
   }
 }
 
-@mixin swatch-ghost($has-offset: true) {
+@mixin swatch-inverse($has-offset: true) {
   position: relative;
 
   &::before {
     position: absolute;
-    top: calc(0rem - space(2x));
-    bottom: calc(0rem - space(2x));
-    left: calc(0rem - space(2x));
+    top: calc(0rem - var(--space-2x));
+    bottom: calc(0rem - var(--space-2x));
+    left: calc(0rem - var(--space-2x));
     @if $has-offset {
-      right: calc(0rem - space(2x));
+      right: calc(0rem - var(--space-2x));
     } @else {
       right: 0;
     }
     z-index: -1;
     display: block;
-    background: $neutral-00;
+    background: var(--neutral-00);
     content: '';
   }
 }
@@ -49,262 +49,262 @@
   // brand color range
   &-bsc-blue {
     @include swatch;
-    background: $brand-primary;
+    background: var(--brand-primary);
   }
 
   // neutral range
   &-neutral-00 {
     @include swatch;
-    background: $neutral-00;
+    background: var(--neutral-00);
   }
 
   &-neutral-20 {
     @include swatch;
-    background: $neutral-20;
+    background: var(--neutral-20);
   }
 
   &-neutral-40 {
     @include swatch;
-    background: $neutral-40;
+    background: var(--neutral-40);
   }
 
   &-neutral-60 {
     @include swatch;
-    background: $neutral-60;
+    background: var(--neutral-60);
   }
 
   &-neutral-80 {
     @include swatch;
-    background: $neutral-80;
+    background: var(--neutral-80);
   }
 
   &-neutral-95 {
     @include swatch;
-    background: $neutral-95;
+    background: var(--neutral-95);
   }
 
   &-neutral-100 {
     @include swatch;
-    border: $border-width-xxs solid $border-color-assertive;
-    background: $neutral-100;
+    border: var(--border-width-xxs) solid var(--border-color-assertive);
+    background: var(--neutral-100);
   }
 
   // action color range
   &-action-primary-10 {
     @include swatch;
-    background: $action-primary-10;
+    background: var(--action-primary-10);
   }
 
   &-action-primary-20 {
     @include swatch;
-    background: $action-primary-20;
+    background: var(--action-primary-20);
   }
 
   &-action-primary-40 {
     @include swatch;
-    background: $action-primary-40;
+    background: var(--action-primary-40);
   }
 
   &-action-primary-60 {
     @include swatch;
-    background: $action-primary-60;
+    background: var(--action-primary-60);
   }
 
   &-action-primary-80 {
     @include swatch;
-    background: $action-primary-80;
+    background: var(--action-primary-80);
   }
 
   &-action-primary-95 {
     @include swatch;
-    background: $action-primary-95;
+    background: var(--action-primary-95);
   }
 
   &-action-primary-97 {
     @include swatch;
-    background: $action-primary-97;
+    background: var(--action-primary-97);
   }
 
   // accent color ranges
   &-accent-primary-20 {
     @include swatch;
-    background: $accent-primary-20;
+    background: var(--accent-primary-20);
   }
 
   &-accent-primary-30 {
     @include swatch;
-    background: $accent-primary-30;
+    background: var(--accent-primary-30);
   }
 
   &-accent-primary-40 {
     @include swatch;
-    background: $accent-primary-40;
+    background: var(--accent-primary-40);
   }
 
   &-accent-primary-60 {
     @include swatch;
-    background: $accent-primary-60;
+    background: var(--accent-primary-60);
   }
 
   &-accent-primary-80 {
     @include swatch;
-    background: $accent-primary-80;
+    background: var(--accent-primary-80);
   }
 
   &-accent-primary-95 {
     @include swatch;
-    background: $accent-primary-95;
+    background: var(--accent-primary-95);
   }
 
   &-accent-secondary-20 {
     @include swatch;
-    background: $accent-secondary-20;
+    background: var(--accent-secondary-20);
   }
 
   &-accent-secondary-40 {
     @include swatch;
-    background: $accent-secondary-40;
+    background: var(--accent-secondary-40);
   }
 
   &-accent-secondary-60 {
     @include swatch;
-    background: $accent-secondary-60;
+    background: var(--accent-secondary-60);
   }
 
   &-accent-secondary-80 {
     @include swatch;
-    background: $accent-secondary-80;
+    background: var(--accent-secondary-80);
   }
 
   &-accent-secondary-95 {
     @include swatch;
-    background: $accent-secondary-95;
+    background: var(--accent-secondary-95);
   }
 
   // feedback color ranges
   &-feedback-success-20 {
     @include swatch;
-    background: $feedback-success-20;
+    background: var(--feedback-success-20);
   }
 
   &-feedback-success-40 {
     @include swatch;
-    background: $feedback-success-40;
+    background: var(--feedback-success-40);
   }
 
   &-feedback-success-60 {
     @include swatch;
-    background: $feedback-success-60;
+    background: var(--feedback-success-60);
   }
 
   &-feedback-success-80 {
     @include swatch;
-    background: $feedback-success-80;
+    background: var(--feedback-success-80);
   }
 
   &-feedback-success-95 {
     @include swatch;
-    background: $feedback-success-95;
+    background: var(--feedback-success-95);
   }
 
   &-feedback-warning-20 {
     @include swatch;
-    background: $feedback-warning-20;
+    background: var(--feedback-warning-20);
   }
 
   &-feedback-warning-40 {
     @include swatch;
-    background: $feedback-warning-40;
+    background: var(--feedback-warning-40);
   }
 
   &-feedback-warning-60 {
     @include swatch;
-    background: $feedback-warning-60;
+    background: var(--feedback-warning-60);
   }
 
   &-feedback-warning-80 {
     @include swatch;
-    background: $feedback-warning-80;
+    background: var(--feedback-warning-80);
   }
 
   &-feedback-warning-95 {
     @include swatch;
-    background: $feedback-warning-95;
+    background: var(--feedback-warning-95);
   }
 
   &-feedback-error-20 {
     @include swatch;
-    background: $feedback-error-20;
+    background: var(--feedback-error-20);
   }
 
   &-feedback-error-40 {
     @include swatch;
-    background: $feedback-error-40;
+    background: var(--feedback-error-40);
   }
 
   &-feedback-error-60 {
     @include swatch;
-    background: $feedback-error-60;
+    background: var(--feedback-error-60);
   }
 
   &-feedback-error-80 {
     @include swatch;
-    background: $feedback-error-80;
+    background: var(--feedback-error-80);
   }
 
   &-feedback-error-95 {
     @include swatch;
-    background: $feedback-error-95;
+    background: var(--feedback-error-95);
   }
 
   // gradients
   &-gradient-brand {
     @include swatch;
-    background: $gradient-brand;
+    background: var(--gradient-brand);
   }
 
   &-gradient-primary {
     @include swatch;
-    background: $gradient-primary;
+    background: var(--gradient-primary);
   }
 
   &-gradient-secondary {
     @include swatch;
-    background: $gradient-secondary;
+    background: var(--gradient-secondary);
   }
 
   &-gradient-accent {
     @include swatch;
-    background: $gradient-accent;
+    background: var(--gradient-accent);
   }
 
   &-gradient-assertive {
     @include swatch;
-    background: $gradient-assertive;
+    background: var(--gradient-assertive);
   }
 
   &-gradient-subtle {
     @include swatch;
-    background: $gradient-subtle;
+    background: var(--gradient-subtle);
   }
 
   // shadows
   &-shadow-primary {
     @include swatch;
-    margin-left: space(2x);
-    box-shadow: $box-shadow-primary;
+    margin-left: var(--space-2x);
+    box-shadow: var(--box-shadow-primary);
   }
 
   &-shadow-secondary {
     @include swatch;
-    margin-left: space(2x);
-    box-shadow: $box-shadow-secondary;
+    margin-left: var(--space-2x);
+    box-shadow: var(--box-shadow-secondary);
   }
 
   &-shadow-tertiary {
     @include swatch;
-    margin-left: space(2x);
-    box-shadow: $box-shadow-tertiary;
+    margin-left: var(--space-2x);
+    box-shadow: var(--box-shadow-tertiary);
   }
 
   // borders
@@ -315,74 +315,73 @@
 
   &-border-color-action {
     @include swatch;
-    @include swatch-border($border-width-xs solid $border-color-action);
+    @include swatch-border(var(--border-width-xs) solid var(--border-color-action));
   }
 
   &-border-color-assertive {
     @include swatch;
-    @include swatch-border($border-width-xs solid $border-color-assertive);
+    @include swatch-border(var(--border-width-xs) solid var(--border-color-assertive));
   }
 
   &-border-color-error {
     @include swatch;
-    @include swatch-border($border-width-xs solid $border-color-error);
+    @include swatch-border(var(--border-width-xs) solid var(--border-color-error));
   }
 
-  &-border-color-ghost {
+  &-border-color-inverse {
     @include swatch;
-    @include swatch-border($border-width-xs solid $border-color-ghost);
-
-    @include swatch-ghost(false);
+    @include swatch-border(var(--border-width-xs) solid var(--border-color-inverse));
+    @include swatch-inverse(false);
   }
 
   &-border-color-subtle {
     @include swatch;
-    @include swatch-border($border-width-xs solid $border-color-subtle);
+    @include swatch-border(var(--border-width-xs) solid var(--border-color-subtle));
   }
 
   &-border-color-success {
     @include swatch;
-    @include swatch-border($border-width-xs solid $border-color-success);
+    @include swatch-border(var(--border-width-xs) solid var(--border-color-success));
   }
 
   &-border-color-warning {
     @include swatch;
-    @include swatch-border($border-width-xs solid $border-color-warning);
+    @include swatch-border(var(--border-width-xs) solid var(--border-color-warning));
   }
 
   &-border-radius-circle {
     @include swatch;
-    width: space(6x);
-    height: space(6x);
-    border-radius: $border-radius-circle;
-    border: $border-width-xs solid $border-color-assertive;
+    width: var(--space-6x);
+    height: var(--space-6x);
+    border-radius: var(--border-radius-circle);
+    border: var(--border-width-xs) solid var(--border-color-assertive);
   }
 
   &-border-radius-sm {
     @include swatch;
-    border-radius: $border-radius-sm;
-    border: $border-width-xs solid $border-color-assertive;
+    border-radius: var(--border-radius-sm);
+    border: var(--border-width-xs) solid var(--border-color-assertive);
   }
 
   &-border-width-xxs {
     @include swatch;
-    @include swatch-border($border-width-xxs solid $border-color-assertive);
+    @include swatch-border(var(--border-width-xxs) solid var(--border-color-assertive));
   }
 
   &-border-width-xs {
     @include swatch;
-    @include swatch-border($border-width-xs solid $border-color-assertive);
+    @include swatch-border(var(--border-width-xs) solid var(--border-color-assertive));
   }
 
   &-border-width-sm {
     @include swatch;
-    @include swatch-border($border-width-sm solid $border-color-assertive);
+    @include swatch-border(var(--border-width-sm) solid var(--border-color-assertive));
   }
 
   // backgrounds
   &-background-action {
     @include swatch;
-    background: $action-primary-95;
+    background: var(--action-primary-95);
   }
 
   // Size
@@ -390,13 +389,13 @@
   &-size-icon-decorative {
     img {
       display: block;
-      width: $size-icon-decorative;
+      width: var(--size-icon-decorative);
       margin: auto;
     }
   }
 
   &-letter-spacing-increase {
-    letter-spacing: $letter-spacing-increase;
+    letter-spacing: var(--letter-spacing-increase);
   }
 
   // Focus
@@ -404,45 +403,45 @@
   &-focus-default {
     @include swatch;
     @include focus-default;
-    margin-left: space(2x);
-    border: $border-width-xxs solid $border-color-assertive;
+    margin-left: var(--space-2x);
+    border: var(--border-width-xxs) solid var(--border-color-assertive);
   }
 
   &-focus-default-inset {
     @include swatch;
     @include focus-default-inset;
-    margin-left: space(2x);
-    border: $border-width-xxs solid $border-color-assertive;
+    margin-left: var(--space-2x);
+    border: var(--border-width-xxs) solid var(--border-color-assertive);
   }
 
-  &-focus-ghost {
+  &-focus-inverse {
     @include swatch;
-    @include focus-ghost;
-    @include swatch-ghost;
-    margin-left: space(2x);
-    border: $border-width-xxs solid $border-color-ghost;
+    @include focus-inverse;
+    @include swatch-inverse;
+    margin-left: var(--space-2x);
+    border: var(--border-width-xxs) solid var(--border-color-inverse);
   }
 
-  &-focus-ghost-inset {
+  &-focus-inverse-inset {
     @include swatch;
-    @include focus-ghost-inset;
-    @include swatch-ghost;
-    margin-left: space(2x);
-    border: $border-width-xxs solid $border-color-ghost;
+    @include focus-inverse-inset;
+    @include swatch-inverse;
+    margin-left: var(--space-2x);
+    border: var(--border-width-xxs) solid var(--border-color-inverse);
   }
 
   &-focus-readonly {
     @include swatch;
     @include focus-readonly;
-    margin-left: space(2x);
-    border: $border-width-xxs solid $border-color-assertive;
+    margin-left: var(--space-2x);
+    border: var(--border-width-xxs) solid var(--border-color-assertive);
   }
 
-  &-focus-invalid {
+  &-focus-error {
     @include swatch;
-    @include focus-invalid;
-    margin-left: space(2x);
-    border: $border-width-xxs solid $border-color-assertive;
+    @include focus-error;
+    margin-left: var(--space-2x);
+    border: var(--border-width-xxs) solid var(--border-color-assertive);
   }
 
   // Gradients
@@ -472,7 +471,7 @@
     position: relative;
 
     &::after {
-      background: $neutral-00;
+      background: var(--neutral-00);
       content: '';
       @include decorative-bar;
     }
@@ -481,74 +480,74 @@
   &-space-xxs,
   &-space-negative-xxs {
     @include swatch-space;
-    width: space(xxs);
-    height: space(xxs);
+    width: var(--space-xxs);
+    height: var(--space-xxs);
   }
 
   &-space-xs,
   &-space-negative-xs {
     @include swatch-space;
-    width: space(xs);
-    height: space(xs);
+    width: var(--space-xs);
+    height: var(--space-xs);
   }
 
   &-space-sm {
     @include swatch-space;
-    width: space(sm);
-    height: space(sm);
+    width: var(--space-sm);
+    height: var(--space-sm);
   }
 
   &-space-md {
     @include swatch-space;
-    width: space(md);
-    height: space(md);
+    width: var(--space-md);
+    height: var(--space-md);
   }
 
   &-space-lg {
     @include swatch-space;
-    width: space(lg);
-    height: space(lg);
+    width: var(--space-lg);
+    height: var(--space-lg);
   }
 
   &-space-2x {
     @include swatch-space;
-    width: space(2x);
-    height: space(2x);
+    width: var(--space-2x);
+    height: var(--space-2x);
   }
 
   &-space-3x {
     @include swatch-space;
-    width: space(3x);
-    height: space(3x);
+    width: var(--space-3x);
+    height: var(--space-3x);
   }
 
   &-space-4x {
     @include swatch-space;
-    width: space(4x);
-    height: space(4x);
+    width: var(--space-4x);
+    height: var(--space-4x);
   }
 
   &-space-6x {
     @include swatch-space;
-    width: space(6x);
-    height: space(6x);
+    width: var(--space-6x);
+    height: var(--space-6x);
   }
 
   &-space-8x {
     @include swatch-space;
-    width: space(8x);
-    height: space(8x);
+    width: var(--space-8x);
+    height: var(--space-8x);
   }
 
   &-space-12x {
     @include swatch-space;
-    width: space(12x);
-    height: space(12x);
+    width: var(--space-12x);
+    height: var(--space-12x);
   }
 
   &-space-15x {
     @include swatch-space;
-    width: space(15x);
-    height: space(15x);
+    width: var(--space-15x);
+    height: var(--space-15x);
   }
 }

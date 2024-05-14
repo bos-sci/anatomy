@@ -6,19 +6,19 @@
   .docs-container {
     display: flex;
     justify-content: center;
-    padding: space(2x) space(4x) space(8x);
+    padding: var(--space-2x) var(--space-4x) var(--space-8x);
 
     &.bg-gradient-assertive {
-      background: $gradient-assertive;
+      background: var(--gradient-assertive);
 
       .docs-page-title,
       .docs-page-description {
-        color: $text-color-ghost;
+        color: var(--text-color-inverse);
       }
     }
 
     &.bg-action {
-      background: $action-primary-97;
+      background: var(--action-primary-97);
     }
 
     .is-constrained {
@@ -26,7 +26,7 @@
     }
 
     .docs-page-title {
-      margin-top: space(6x);
+      margin-top: var(--space-6x);
     }
 
     .docs-page-description {
@@ -35,6 +35,6 @@
   }
 
   + .docs-footer {
-    margin-top: space(4x);
+    margin-top: var(--space-4x);
   }
 }

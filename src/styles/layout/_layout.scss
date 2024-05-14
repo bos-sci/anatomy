@@ -8,20 +8,25 @@
 
 body {
   margin: 0;
-  background: $neutral-100;
+  background: var(--neutral-100);
 }
 
 .docs-root {
   display: flex;
   flex-direction: column;
   height: 100vh;
+
+  .bsds-nav-primary {
+    // TODO: remove this block after primary nav border in anatomy-react is fixed
+    border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
+  }
 }
 
 // TODO: ADS-410
 main {
   img {
     width: 100%;
-    margin-top: space(3x);
+    margin-top: var(--space-3x);
   }
 }
 
@@ -48,31 +53,31 @@ main {
     justify-content: start;
     justify-items: start;
     overflow-y: auto;
-    padding: space(4x) calc(space(4x) - space(md));
+    padding: var(--space-4x) calc(var(--space-4x) - var(--space-md));
   }
 }
 
 .docs-page-header {
   grid-area: intro;
   width: 100%;
-  padding: 0 space(sm);
+  padding: 0 var(--space-sm);
 }
 
 .docs-storybook-link {
   display: inline-block;
-  margin-top: space(lg);
+  margin-top: var(--space-lg);
 }
 
 .docs-page-content {
   grid-area: page-content;
   width: 100%;
   overflow-x: auto;
-  padding: 0 space(sm);
+  padding: 0 var(--space-sm);
 
   /* stylelint-disable-next-line selector-class-pattern */
   > .docs-preview- {
     &:first-of-type {
-      margin-top: space(6x);
+      margin-top: var(--space-6x);
     }
   }
 }
@@ -83,7 +88,7 @@ main {
 
 .docs-datestamp {
   margin-top: 0;
-  @include font-size($fs-body-subtle);
+  font-size: var(--fs-body-subtle);
 
   dt,
   dd {
@@ -92,12 +97,12 @@ main {
 
   dd {
     margin-bottom: 0;
-    margin-left: space(md);
+    margin-left: var(--space-md);
   }
 }
 
 .docs-footer {
-  margin-top: space(12x);
+  margin-top: var(--space-12x);
 }
 
 .docs-body-minimal {
@@ -106,7 +111,7 @@ main {
   margin: 0 auto;
 
   main {
-    padding: space(4x) calc(space(4x) - space(md));
+    padding: var(--space-4x) calc(var(--space-4x) - var(--space-md));
   }
 
   h1 {
@@ -115,13 +120,20 @@ main {
 }
 
 @media (min-width: $breakpoint-lg-min) {
+  // TODO: remove this block after primary nav border in anatomy-react is fixed
+  .docs-root {
+    .bsds-nav-bar {
+      border-bottom: 0;
+    }
+  }
+
   .docs-body {
     grid-template-areas: 'nav-secondary main';
     grid-template-columns: 1fr 4fr;
     width: var(--app-width);
     margin-right: auto;
     margin-left: auto;
-    gap: 0 space(4x) - space(md);
+    gap: 0 var(--space-4x) - var(--space-md);
 
     main {
       display: grid;
@@ -130,28 +142,28 @@ main {
         'page-content nav-tertiary';
       grid-template-columns: 4fr 1fr;
       grid-template-rows: auto 1fr;
-      gap: 0 space(4x);
+      gap: 0 var(--space-4x);
       justify-content: start;
       justify-items: start;
-      margin-top: space(4x);
-      padding: 0 space(sm);
+      margin-top: var(--space-4x);
+      padding: 0 var(--space-sm);
     }
 
     > .bsds-nav-secondary {
       width: 12rem; // NOTE: this is a one-off size
-      margin-top: space(4x);
+      margin-top: var(--space-4x);
     }
 
     .bsds-nav-tertiary {
       width: 12rem; // NOTE: this is a one-off size
-      margin-top: space(lg);
+      margin-top: var(--space-lg);
     }
   }
 
   .docs-body-minimal {
     main {
-      margin-top: space(4x);
-      padding: 0 space(sm);
+      margin-top: var(--space-4x);
+      padding: 0 var(--space-sm);
     }
   }
 }

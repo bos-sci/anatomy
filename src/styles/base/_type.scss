@@ -1,7 +1,7 @@
 body {
-  color: $text-color-primary;
+  color: var(--text-color-default);
   @include font-family-base-regular;
-  @include font-size($fs-body);
+  font-size: var(--fs-body);
   line-height: 1.5;
 }
 
@@ -15,70 +15,70 @@ h6 {
 }
 
 h1 {
-  margin: space(8x) 0 0;
-  @include font-size($fs-h1);
+  margin: var(--space-8x) 0 0;
+  font-size: var(--fs-h1);
   line-height: 1.4;
 }
 
 h2 {
-  margin: space(6x) 0 0;
-  @include font-size($fs-h2);
+  margin: var(--space-6x) 0 0;
+  font-size: var(--fs-h2);
   line-height: 1.4;
 }
 
 h3 {
-  margin: space(6x) 0 0;
-  @include font-size($fs-h3);
+  margin: var(--space-6x) 0 0;
+  font-size: var(--fs-h3);
   line-height: 1.4;
 }
 
 h4 {
-  margin: space(4x) 0 0;
-  @include font-size($fs-h4);
+  margin: var(--space-4x) 0 0;
+  font-size: var(--fs-h4);
   line-height: 1.4;
 }
 
 h5 {
-  margin: space(3x) 0 0;
-  @include font-size($fs-h5);
+  margin: var(--space-3x) 0 0;
+  font-size: var(--fs-h5);
   line-height: 1.5;
 }
 
 h6 {
-  margin: space(3x) 0 0;
-  @include font-size($fs-h6);
+  margin: var(--space-3x) 0 0;
+  font-size: var(--fs-h6);
   line-height: 1.5;
 }
 
 p,
 dl,
 small {
-  margin: space(2x) 0 0;
+  margin: var(--space-2x) 0 0;
 }
 
 ul,
 ol {
-  margin: space(2x) 0 0;
-  padding-left: space(4x);
+  margin: var(--space-2x) 0 0;
+  padding-left: var(--space-4x);
 }
 
 li {
   &:not(:first-of-type) {
-    margin: space(2x) 0 0;
+    margin: var(--space-2x) 0 0;
   }
 }
 
 figure {
   position: relative;
-  margin: space(4x) space(4x) 0;
+  margin: var(--space-4x) var(--space-4x) 0;
 
   blockquote {
     margin: 0;
   }
 
   figcaption {
-    margin: space(md) 0 0;
-    padding-left: space(3x);
+    margin: var(--space-md) 0 0;
+    padding-left: var(--space-3x);
 
     &::before {
       position: absolute;
@@ -102,31 +102,31 @@ code {
 }
 
 .bsds-font-size-display {
-  @include font-size($fs-display);
+  font-size: var(--fs-display);
 }
 
 .bsds-body-assertive {
-  margin: space(3x) 0 0;
+  margin: var(--space-3x) 0 0;
 
   li {
     &:not(:first-of-type) {
-      margin: space(3x) 0 0;
+      margin: var(--space-3x) 0 0;
     }
   }
 }
 
 .bsds-body-subtle {
-  @include font-size($fs-body-subtle);
+  font-size: var(--fs-body-subtle);
 }
 
 small,
 .bsds-font-size-sm {
   display: block;
-  @include font-size($fs-small);
+  font-size: var(--fs-small);
 
   li {
     &:not(:first-of-type) {
-      margin: space(md) 0 0;
+      margin: var(--space-md) 0 0;
     }
   }
 }
